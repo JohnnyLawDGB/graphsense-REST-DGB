@@ -26,6 +26,7 @@ database:
         btc:
         bch:
         ltc:
+        dgb:
         zec:
 
 # Restrict allowed origins for CORS

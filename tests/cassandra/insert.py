@@ -11,7 +11,13 @@ DATA_DIR = Path(__file__).parent.resolve() / "data"
 TAG = "master"
 SCHEMA_BASE = f"https://raw.githubusercontent.com/graphsense/graphsense-lib/{TAG}/src/graphsenselib/schema/resources/"
 
-SCHEMA_MAPPING = {"btc": "utxo", "ltc": "utxo", "eth": "account", "trx": "account_trx"}
+SCHEMA_MAPPING = {
+    "btc": "utxo",
+    "ltc": "utxo",
+    "dgb": "utxo",
+    "eth": "account",
+    "trx": "account_trx",
+}
 
 SCHEMA_MAPPING_OVERRIDE = {("trx", "transformed"): "account"}
 
