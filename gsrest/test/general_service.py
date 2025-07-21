@@ -39,6 +39,17 @@ stats = Stats(
             no_address_relations=123,
         ),
         CurrencyStats(
+            name="dgb",
+            no_entities=789,
+            no_addresses=456,
+            no_blocks=3,
+            timestamp=42,
+            no_txs=11,
+            no_labels=2,
+            no_tagged_addresses=20,
+            no_address_relations=123,
+        ),
+        CurrencyStats(
             name="trx",
             no_entities=0,
             no_addresses=1,
@@ -71,6 +82,7 @@ async def search(test_case):
             currencies=[
                 SearchResultByCurrency(currency="btc", addresses=[], txs=[]),
                 SearchResultByCurrency(currency="ltc", addresses=[], txs=[]),
+                SearchResultByCurrency(currency="dgb", addresses=[], txs=[]),
                 SearchResultByCurrency(currency="eth", addresses=[], txs=[]),
                 SearchResultByCurrency(currency="trx", addresses=[], txs=[]),
             ],
@@ -148,13 +160,13 @@ async def search(test_case):
     assert expected.to_dict() == result
 
     expected = base_search_results()
-    expected.currencies[2] = SearchResultByCurrency(
+    expected.currencies[3] = SearchResultByCurrency(
         currency="eth",
         txs=["af6e0000".rjust(64, "0"), "af6e0003".rjust(64, "0")],
         addresses=[],
     )
 
-    expected.currencies[3] = SearchResultByCurrency(
+    expected.currencies[4] = SearchResultByCurrency(
         currency="trx",
         txs=["af6e0000".rjust(64, "0"), "af6e0003".rjust(64, "0")],
         addresses=[],
@@ -164,7 +176,7 @@ async def search(test_case):
     expected.to_dict() == result
 
     expected = base_search_results()
-    expected.currencies[2] = SearchResultByCurrency(
+    expected.currencies[3] = SearchResultByCurrency(
         currency="eth", txs=[], addresses=["0xabcdef"]
     )
 

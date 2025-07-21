@@ -1,0 +1,1 @@
+ {"keyspace_name": "dgb_transformed", "bech_32_prefix": "dgb1", "bucket_size": 25000, "coinjoin_filtering": true, "fiat_currencies": ["EUR", "USD"], "address_prefix_length": 5}}

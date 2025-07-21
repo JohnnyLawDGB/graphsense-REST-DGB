@@ -47,6 +47,10 @@ def gs_rest_db_setup(request):
                     "raw": "resttest_ltc_raw",
                     "transformed": "resttest_ltc_transformed",
                 },
+                "dgb": {
+                    "raw": "resttest_dgb_raw",
+                    "transformed": "resttest_dgb_transformed",
+                },
                 "eth": {
                     "raw": "resttest_eth_raw",
                     "transformed": "resttest_eth_transformed",
